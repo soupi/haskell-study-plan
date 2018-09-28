@@ -1,0 +1,794 @@
+* Haskell Study Plan
+** About This Guide
+This guide is an opinionated list of resources for learning Haskell.
+
+It is aimed at more experienced programmers that would like a denser Haskell tutorial.
+
+If you prefer a gentler introduction, try one of these resources:
+
+- [[https://www.seas.upenn.edu/~cis194/spring13/lectures.html][cis194 course]]
+- [[https://en.wikibooks.org/wiki/Haskell][Haskell Wikibook]]
+- [[http://haskellbook.com/][Haskell Programming From First Principles]]
+- [[http://www.cs.nott.ac.uk/~pszgmh/pih.html][Programming in Haskell]]
+** Table of Contents                                                  :TOC_3:
+- [[#haskell-study-plan][Haskell Study Plan]]
+  - [[#about-this-guide][About This Guide]]
+  - [[#beginning][Beginning]]
+  - [[#more-basics-drill-down][More Basics Drill Down]]
+  - [[#useful-packages][Useful Packages]]
+  - [[#tools][Tools]]
+  - [[#exercises][Exercises]]
+    - [[#lists][Lists]]
+    - [[#sort-a-list][Sort a List]]
+    - [[#dict][Dict]]
+    - [[#ppm][PPM]]
+    - [[#rpn-calculator][RPN Calculator]]
+  - [[#lambda-calculus][Lambda Calculus]]
+    - [[#overview][Overview]]
+    - [[#exercises-1][Exercises]]
+  - [[#kinds][Kinds]]
+    - [[#overview-1][Overview]]
+    - [[#exercise][Exercise]]
+  - [[#what-is-io][What is IO?]]
+    - [[#overview-2][Overview]]
+    - [[#do-notation][Do notation]]
+    - [[#exercises-2][Exercises]]
+  - [[#type-classes][Type classes]]
+    - [[#overview-3][Overview]]
+    - [[#more-material][More Material]]
+    - [[#exercise-1][Exercise]]
+  - [[#monoids-functors-applicative-monads-and-more][Monoids, Functors, Applicative, Monads and More]]
+    - [[#overview-4][Overview]]
+    - [[#instances][Instances]]
+    - [[#exercises-3][Exercises]]
+    - [[#bonus-counterexamples-of-type-classes][Bonus: Counterexamples of Type Classes]]
+    - [[#more][More]]
+  - [[#error-handling][Error Handling]]
+    - [[#using-either-for-errors][Using Either for errors]]
+    - [[#exceptions][Exceptions]]
+    - [[#exercises-4][Exercises]]
+  - [[#debugging][Debugging]]
+  - [[#laziness][Laziness]]
+  - [[#performance][Performance]]
+    - [[#resources][Resources]]
+    - [[#data-structures][Data Structures]]
+  - [[#monad-transformers][Monad Transformers]]
+    - [[#overview-5][Overview]]
+    - [[#exercises-5][Exercises]]
+  - [[#ghc-language-extensions][GHC Language Extensions]]
+  - [[#functional-patterns][Functional Patterns]]
+    - [[#effectful-outer-layer-uneffectful-core][Effectful outer layer, Uneffectful core]]
+    - [[#compose-smaller-things-to-bigger-things][Compose Smaller Things to Bigger Things]]
+    - [[#type-classes-patterns][Type Classes Patterns]]
+    - [[#more-1][More]]
+  - [[#more-2][More]]
+    - [[#more-resources-tutorials-and-project-ideas][More resources, tutorials and project ideas]]
+    - [[#some-advanced-topics][Some Advanced Topics]]
+    - [[#references-and-tools][References and Tools]]
+    - [[#simple-example-programs][Simple Example Programs]]
+    - [[#a-few-cool-open-source-applications][A Few Cool Open-Source Applications]]
+
+** Beginning
+1. [[https://haskell-lang.org/get-started][Get Started]]
+2. [[https://soupi.github.io/rfc/reading_simple_haskell][Reading Simple Haskell]]
+3. [[https://soupi.github.io/rfc/writing_simple_haskell][Writing Simple Haskell]]
+4. [[https://en.wikibooks.org/wiki/Haskell/Indentation][Indentation]]
+5. [[https://www.seas.upenn.edu/~cis194/spring13/lectures/01-intro.html][Haskell intro (cis194)]]
+6. [[http://www.scs.stanford.edu/16wi-cs240h/slides/basics.html][Haskell Basics (cs240h)]]
+7. [[https://github.com/Gabriel439/slides/blob/master/bigtechday/slides.md][Haskell and proving things]]
+   - Read until "Everything is a Monoid" (right after "Chaining proofs")
+
+The basics are important, each resource here brings it's own view on it which will help solidify this material.
+If there are exercises to do, do them!
+
+Key ideas:
+
+- In Haskell we use a different computation model
+  - Instead of "telling the machine what to do in order to change the state of the machine"
+    we "transform data until we have the result we want"
+- Referential Transparency enables equational reasoning
+- Types help prevent errors and help model programs
+** More Basics Drill Down
+- Wikibook
+  - [[https://en.wikibooks.org/wiki/Haskell/Recursion][Recursion]]
+  - [[https://en.wikibooks.org/wiki/Haskell/Lists_and_tuples][Lists and tuples]]
+  - [[https://en.wikibooks.org/wiki/Haskell/Type_basics][Type basics]]
+  - [[https://en.wikibooks.org/wiki/Haskell/More_on_datatypes#Named_Fields_(Record_Syntax)][Records]]
+  - [[https://en.wikibooks.org/wiki/Haskell/Higher-order_functions][Higher Order Functions]]
+  - [[https://en.wikibooks.org/wiki/Haskell/Modules][Modules]] and [[https://en.wikibooks.org/wiki/Haskell/Standalone_programs][Standalone Programs]]
+** Useful Packages
+Here are a few useful packages you might want to use when building software with Haskell:
+
+- [[https://hackage.haskell.org/package/base][base]] - Haskell standard library. Contains large collection of useful libraries ranging from data structures to parsing combinators and debugging utilities.
+- [[https://hackage.haskell.org/package/containers][containers]] - Contains efficient general-purpose implementations of various immutable container types including sets, maps, sequences, trees, and graphs.
+- [[http://hackage.haskell.org/package/vector][vector]] - Efficient arrays.
+- [[https://hackage.haskell.org/package/text][text]] - An efficient unicode text type. It is much more efficient than the built in ~String~ type.
+- [[https://hackage.haskell.org/package/bytestring][bytestring]] - An efficient vector of byte type.
+- [[http://hackage.haskell.org/package/async][async]] - API for running IO operations asynchronously.
+- [[http://hackage.haskell.org/package/network][network]] - Low-level networking interface.
+- [[http://hackage.haskell.org/package/random][random]] - random number library.
+
+[[https://haskell-lang.org/libraries][And more]].
+** Tools
+- [[https://haskell-lang.org/tutorial/stack-play][How to Play with Stack]]
+- [[https://en.wikibooks.org/wiki/Haskell/Using_GHCi_effectively][Using GHCi Effectively]]
+- [[https://www.haskell.org/hoogle/][Hoogle]]
+- [[https://github.com/ndmitchell/ghcid#readme][GHCid]]
+- Editor Integration
+  - [[https://github.com/soupi/minimal-haskell-emacs][Emacs]]
+    - [[https://github.com/soupi/minimal-haskell-emacs/tree/evil][+ vim bindings]]
+  - [[https://github.com/dramforever/vscode-ghc-simple][VSCode]]
+  - [[https://www.reddit.com/r/haskell/comments/9bxbwp/which_ide_are_you_using_for_hakell/][More Options]]
+** Exercises
+*** Lists
+- [[https://wiki.haskell.org/99_questions/1_to_10][1-10 Haskell Problems]]
+- [[https://wiki.haskell.org/99_questions/11_to_20][11-20 Haskell Problems]]
+*** Sort a List
+Sort a list of ints by inserting all its elements into a binary tree.
+
+1. Define a data type of a binary tree
+2. Define the types of operations relevant to the task (sort, insert, insertList, flatten, display)
+3. Implement these functions
+
+Think of scenarios and unit test your functions
+
+*** Dict
+Compress and decompress a file using dict compression.
+
+Dict compression takes text, splits it by words, and creates two things:
+1. A mapping from each word in the text to a number
+2. the original text where each word is replaced by it's map's number
+
+Your task is to create an application that can either compress or decompress a text file.
+
+There are two commands: compress and decompress, they both get a text file.
+
+- To compress: ~> dict compress file.txt~
+- To decompress: ~> dict decompress file.txt~
+
+For the compress command, the output should be the compressed items ((1) and (2)).
+For the decompress command, the output should be the original text.
+
+*Note*: You can use the functions ~read~ and ~show~ to convert from/to some types and ~String~.
+
+*** PPM
+Create a program that will output a [[https://en.wikipedia.org/wiki/Netpbm_format#PPM_example][PPM file]].
+
+1. The size of each "pixel" should be controlled by a parameter
+2. Your input should be a list of list of colors
+3. If a row is not long enough fill the rest of it with the color white
+4. *Bonus*: Choose a pallete of 8 or 16 basic colors and read a file containing numbers from 0 to 7 (or 15)
+   separated by spaces and newlines, and output it's image
+*** RPN Calculator
+Create a program that calculates an arithmetic expression written in [[https://en.wikipedia.org/wiki/Reverse_Polish_notation][reverse polish notation]].
+
+Implement the following operations:
+
+literal integers, +, -, *, /, negate
+
+Example execution:
+
+#+BEGIN_SRC
+$ rpn-calc 5 7 2 negate + *
+0
+#+END_SRC
+** Lambda Calculus
+*** Overview
+The lambda calculus is a minimalistic language that is in the core of functional programming.
+
+It presents a minimalistic framework to learn about many common features in functional languages.
+
+- [[http://www.inf.fu-berlin.de/lehre/WS03/alpi/lambda.pdf][Use this tutorial to learn about the lambda calculus]]
+- [[https://en.wikipedia.org/wiki/Lambda_calculus][Wikipedia article on the Lambda Calculus]]
+
+*** Exercises
+
+1. Reduce the following expressions to normal form using pen and paper
+   1. ~λx. x~
+   2. ~(λx. x) y~
+   3. ~(λx. x x) (λy. y)~
+   4. ~(λw. λx. λz. x w z) a (λb. λc. c b) (λd. d)~
+2. Use eta conversion on the following expression
+   1. ~λx. f x~
+   2. ~λf. λy. (λx. f x) y~
+3. Write the expression ~2 + 3~ in the lambda calculus and evaluate it using pen and paper
+4. Write the expression ~factorial 5~ in the lambda calculus and evaluate it using pen and paper
+
+Use this [[http://cdparks.github.io/lambda-machine/][Lambda Machine]] to check your answers
+
+** Kinds
+*** Overview
+Every expression has a concrete type.
+
+Kinds are the types of types.
+
+Definition of kinds in GHC:
+
+#+BEGIN_SRC haskell
+data Kind
+  = Type -- can also be written as: *
+  | KArr Kind Kind -- KArr in Haskell this is written as: ->
+#+END_SRC
+
+Think of ~Type~ being the kind of concrete types, and ~KArr~ is a function from ~Kind~ to ~Kind~.
+
+If a type is parametarized (when defining the ADT you pass it parameters)
+then in order for it to be concrete you have to supply it with all the types it expects to get.
+
+Example:
+
+#+BEGIN_SRC haskell
+
+data Bool
+  = True
+  | False
+
+data Maybe a
+  = Just a
+  | Nothing
+
+#+END_SRC
+
+~Bool~ is not parametarized so it is a concrete type (which means it's kind is ~Type~)
+and has the Values ~True~ and ~False~.
+
+~Maybe~ is not a concrete type, it need to be supplied with a type for ~a~. (It has the kind ~Type -> Type~).
+
+~Maybe Bool~ is a concrete type because all of the paramters for ~Maybe~ have been supplied.
+
+More examples:
+
+| Value     | Type                   | Kind                           | Comments                             |
+|-----------+------------------------+--------------------------------+--------------------------------------|
+| True      | Bool                   | Type  (also written ~*~)       | a value                              |
+| 'c'       | Char                   | Type                           |                                      |
+| "Hello"   | String                 | Type                           |                                      |
+| not True  | Bool                   | Type                           | function application                 |
+| Just True | Maybe Bool             | Type                           |                                      |
+| ["Hello"] | [String]               | Type                           |                                      |
+| Nothing   | Maybe a                | Type                           | polymorphic                          |
+| id        | a -> a                 | Type                           | a function                           |
+| map       | (a -> b) -> [a] -> [b] | Type                           |                                      |
+| map not   | [Bool] -> [Bool]       | Type                           | partially applied function           |
+| getLine   | IO String              | Type                           |                                      |
+| putStrLn  | String -> IO ()        | Type                           |                                      |
+|           | Void                   | Type                           | a concrete types with no values      |
+|           | Maybe                  | Type -> Type                   | isn't fully supplied with parameters |
+|           | IO                     | Type -> Type                   |                                      |
+|           | Either                 | Type -> Type -> Type           |                                      |
+|           | Either a               | Type -> Type                   | partially supplied with parameters   |
+|           | Free                   | (Type -> Type) -> Type -> Type | the first argument is of higher kind |
+
+
+You can use ghci to query the kind of a type using ~:kind~
+
+Why do we care about Kinds? It let us generalize things and create abstractions.
+
+Let's take a look at a data type that uses higher kinds:
+
+#+BEGIN_SRC haskell
+data Rec f a
+  = Rec a (f (Rec f a))
+#+END_SRC
+
+- This data type has two type parameters, ~f~ and ~a~.
+From their use in the right side of the ~=~ we can see that ~a~ has the kind ~Type~ because
+it is placed as a field without type arguments. We can also see that ~f~ has kind ~Type -> Type~
+because it is placed as a field with one type argument (which in this case, is the same data type we defined).
+This makes ~Rec~ kind to be ~(Type -> Type) -> Type -> Type~.
+
+Why is this data type interesting? Let's try to plug some types and see.
+We need some ~a~ which as kind ~Type~ so let's just choose ~Int~ for now, and let's use ~Maybe~ for ~f~.
+Let's look at some values of our new type ~Rec Maybe Int~.
+
+- ~x1 = Rec 1 Nothing~
+- ~x2 = Rec 1 (Just (Rec 2 Nothing))~
+- ~x3 = Rec 1 (Just (Rec 2 (Just (Rec 3 Nothing))))~
+
+See a pattern here? it seems like this is an encoding of a non-empty list:
+
+- You always have at least one value
+- ~Nothing~ is similar to ~Nil~
+- ~Just~ is similar to ~Cons~
+
+Let's take a look at another example with this type:
+
+#+BEGIN_SRC haskell
+data Identity a
+  = Identity a
+#+END_SRC
+
+~Identity~ basically just holds a value of type ~a~. Nothing interesting here.
+
+Let's try to plug it in ~Rec~ (and get ~Rec Identity Int~) and see what kind of value we can have:
+
+- ~y1 = Rec 1 (Identity (Rec 2 (Identity (Rec 3 (Identity ...)))))~
+- ~y2 = Rec 0 y2~
+
+As you can see we basically need to keep providing new values with no way of bailing out.
+So we got an infinite list of values (or a stream).
+
+We can write all kinds of generic algorithms on this data type and reuse them
+for different scenarios and needs simply by pluging in a different ~f~!
+
+We'll see more of those after we talk about type classes.
+
+And by the way, the real name of ~Rec~ is [[https://hackage.haskell.org/package/free-5.1/docs/Control-Comonad-Cofree.html][Cofree]].
+
+*** Exercise
+Try to plug into our ~Rec~ a different type of kind ~Type -> Type~ that you know and see what happens!
+** What is IO?
+*** Overview
+It is a parametarized type constructor (it has the kind ~Type -> Type~).
+
+~IO a~ represents a description of a program (or subroutine) that when executed
+will produce some value of type ~a~ and may do some I/O effects while at it.
+
+Evaluating an ~IO a~ is pure - the evaluation will always reduce to the same *description of a program*.
+
+In an executable, you need to define ~main :: IO ()~ - a description of a program to run. The Haskell runtime will execute this.
+
+
+You can combine subroutine descriptions to create bigger subroutine descriptions:
+
+1. ~pure :: a -> IO a~
+
+   Produces a value without doing any I/O.
+
+   - Example: ~pure True~
+
+   Which has the type ~IO Bool~, will not do any I/O and when executed will produce a value of type ~Bool~, specifically ~True~.
+
+2. ~fmap :: (a -> b) -> IO a -> IO b~
+
+   Similar to ~map~ on lists, it will apply a function on the parameter of ~IO~.
+
+   - Example: ~fmap not (pure True)~
+
+   Which has the type ~IO Bool~ will not do any I/O and when executed will produce a value of type ~Bool~ by first applying the function ~not~ on the result of ~pure True~,
+   and so will produce the value ~False~.
+
+3. ~(>>) :: IO a -> IO b -> IO b~
+   
+   Run this first thing, discard the result, and then run the second thing.
+
+   - Example:
+     #+BEGIN_SRC haskell
+     putStrLn "Hello" >> putStrLn "World"
+     #+END_SRC
+
+   Which has the type ~IO ()~, when executed, will print the string ~Hello~ and then will print the string ~World~
+   and will produce a value of type ~()~, specifically ~()~ (in this case the value has the same name as the type).
+
+4. ~(>>=) :: IO a -> (a -> IO b) -> IO b~
+
+   Run this first thing, take its result, pass it to the function which is the second argument, and then execute that.
+
+   - Example: ~getLine >>= putStrLn~
+
+   Which has the type ~IO ()~ will read a ~String~ from the user, apply that String to ~putStrLn~ and then execute it,
+   thus printing the same string it got from the user.
+   Then it will produce a value of type ~()~, specifically ~()~.
+
+   Note: You can implement ~(>>)~ using ~(>>=)~ like this:
+
+     #+BEGIN_SRC haskell
+     (>>) prog1 prog2 = prog1 >>= \_ -> prog2
+     #+END_SRC
+
+5. ~join :: IO (IO a) -> IO a~
+
+  Takes a description of a program that produces a description of a program that produces a value of type ~a~
+  and converts it to a descrption of a program that will produce a value of type ~a~ by executing the first, and then executing the result.
+
+  - Example: ~join (fmap putStrLn getLine)~
+
+  Which is the same as ~getLine >>= putStrLn~.
+  As you can see we can implement ~>>=~ using ~fmap~ and ~join~
+
+    #+BEGIN_SRC haskell
+    (>>=) prog func = join (fmap func prog)
+    #+END_SRC
+
+There are many more functions and combinators that return ~IO a~. You can view some of them in the module [[http://hackage.haskell.org/package/base-4.11.1.0/docs/System-IO.html#t:IO][System.IO]].
+*** Do notation
+
+do notation is syntactic sugar around ~>>~ and ~>>=~.
+
+Example:
+
+#+BEGIN_SRC haskell
+main = do
+  putStrLn "Tell me your name."
+  let greet name = "Hello, " ++ name ++ "!"
+  name <- getLine
+  putStrLn (greet name)
+#+END_SRC
+
+Will be desugared to:
+
+#+BEGIN_SRC haskell
+main =
+  putStrLn "Tell me your name." >>
+    let
+      greet name = "Hello, " ++ name ++ "!"
+    in
+      getLine >>= \name ->
+        putStrLn ("Hello, " ++ name ++ "!")
+#+END_SRC
+
+1. A regular line that does not create a binding will be sequenced to the next using ~>>~
+2. A new definition can be created using ~let~, it will be translated to ~let <definition> in <rest of the lines in the do>~
+3. A line that creates a binding with ~<-~ will use ~>>=~ to pass the result and the lambda (~\name ->~) is used to bind the variable to the result
+4. The last line will remain the same - no desugar needed
+
+This is basically CPS (continuation passing style).
+
+| code                   | operator | type of the left side | type of the right side | comments                                                                                    |
+|------------------------+----------+-----------------------+------------------------+---------------------------------------------------------------------------------------------|
+| let gretting = "hello" | ~=~      | String                | String                 | ~=~ means both side are interchangeable (they both mean exactly the same thing)             |
+| name <- getLine        | ~<-~     | String                | IO String              | ~<-~ is syntactic sugar for ~>>=~ where we bind the *result* of the computation to the name |
+
+IO's API fits a pattern that can be seen in more types in Haskell, which is why the type signatures
+of the functions presented here are more general. We'll discuss that later.
+*** Exercises
+- Implement a number guessing game
+  - Generate a random number between 1 and 100, the user should try to guess what it is.
+    - If the user guess is too high, say it's too high.
+    - If the user guess is too low, say it's too low.
+    - Hint: you can use [[https://hackage.haskell.org/package/random-1.1/docs/System-Random.html#v:randomRIO][randomRIO]] to generate a random number
+  - Bonus: Remember the amount of times the user guess and print that at the end of the game.
+    - Hint: In pure functional programming we use recursion to emulate state
+  - Bonus: Remember the user's guesses and tell them if they already tried that guess.
+- Implement a [[https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop][REPL]] interface to your [[#rpn-calculator][RPN Calculator]]
+  - Create an interactive interface that lets the user repeatedly write calculations
+    and return the evaluations for them
+** Type classes
+*** Overview
+We use type classes to describe groups of types that all behave in a similar way and refer to the generically.
+
+A good type class will have operations on the type and laws attached to it - similar to abstract algebra.
+
+Laws cannot be enforced by the compiler - a good convention in Haskell is not to define lawless type classes and not implement unlawful instances.
+
+We define a type class like this:
+
+#+BEGIN_SRC haskell
+class Eq (a :: *) where
+  (==) :: a -> a -> Bool
+#+END_SRC
+
+We define a class of types that can implement the operation ~(==)~.
+
+We implement an instance of a type class for a given type like this:
+
+#+BEGIN_SRC haskell
+-- In this case we place `Bool` in place of `a` everywhere
+instance Eq Bool where
+  (==) b1 b2 = case (b1, b2) of
+    (True, True) -> True
+    (False, False) -> True
+    _ -> False
+#+END_SRC
+
+Now we can implement polymorphic functions that will work on a subset of all types - all types that fill the constraint - have instances of a type class.
+
+#+BEGIN_SRC haskell
+(/=) :: Eq a => a -> a -> Bool
+(/=) x y = not (x == y)
+#+END_SRC
+
+class instances should be defined in the same place as the type class definition or at the same place as the type definitions.
+Failing to do that may cause [[https://wiki.haskell.org/Orphan_instance][Orphan Instances]].
+
+
+| Abstraction             | definition                          | different substitutions                                     | comments                                                                                   |
+|-------------------------+-------------------------------------+-------------------------------------------------------------+--------------------------------------------------------------------------------------------|
+| No polymorphism         | func1 ::          Int -> Int -> Int | none                                                        | we know exactly which types are used and can do all kinds of operations on them            |
+| Parametric polymorphism | func2 ::            a ->   a ->   a | ~a~ can be any type                                         | We don't know which types ~a~ and ~b~ are and can't do any type related operations on them |
+| Type classes (ad-hoc)   | func3 :: Ord a =>   a ->   a ->   a | ~a~ can be any type that can be ordered (Bool, Int, String) | anything to the left of ~=>~ is a constraint on the type                                   |
+
+*** More Material
+
+- [[https://www.youtube.com/watch?v=6COvD8oynmI][Adventure with Types in Haskell - SPJ]]
+- [[https://en.wikibooks.org/wiki/Haskell/Classes_and_types][Haskell Wikibook Chapter on Classes and Types]]
+- [[https://en.wikibooks.org/wiki/Haskell/Type_basics_II][Numbers type classes]]
+
+*** Exercise
+- Read about a few common type classes:
+  - Show
+  - Read
+  - Eq
+  - Ord
+  - Num
+  - Integral
+  - Floating
+- Go back to [[#sort-a-list][Sort a List]] exercise and change it to work on more types than just ~Int~
+
+Note: We can create instances for higher kinded types (for example: ~Type -> Type~). We will see some of those next.
+** Monoids, Functors, Applicative, Monads and More
+*** Overview
+Key idea:
+
+*These are abstract algebraic structures*
+
+The define operations and laws on them such as identity and associativity.
+
+Many patterns fit these structures, making them useful as abstractions!
+
+Type classes you should care about (at the moment):
+
+- Semigroup
+- Monoid
+- Functor
+- Applicative
+- Monad
+
+- Foldable
+- Traversable
+
+Read about them in the [[https://wiki.haskell.org/Typeclassopedia][typeclassopedia]] in this order.
+
+After that: read [[http://dev.stephendiehl.com/hask/#monads][The monads section in wiwik]] to meet some useful monad instances.
+
+- [[https://github.com/Gabriel439/slides/blob/master/bigtechday/slides.md][Haskell and proving things]]
+    - Read from "Everything is a Monoid" (right after "Chaining proofs") or from the beginning if you want to review it again
+
+*** Instances
+Make sure to meet:
+
+- Maybe
+- Either
+- List
+- ~->~ (Functions)
+- IO
+- Reader
+- State
+- Writer
+
+And understand why and how they work!
+*** Exercises
+- Implement some instances to a few types you like.
+- Implement ~Functor~, ~Foldable~ and ~Traversable~ instances for the ~Tree~ data type you defined at [[#sort-a-list][Sort a list]] and revised in [[#type-classes][Type Classes]]
+- Implement a ~Foldable~ instance for the ~Rec~ data type we defined in the section on Kinds.
+  - Test your solution by using ~Sum~, ~Product~, ~Any~ or ~All~ from ~Data.Monoid~.
+- Implement a ~Functor~ instance for the ~Rec~ data type we defined in the section on Kinds.
+  - Test your solution by mapping and then folding
+*** Bonus: [[https://blog.functorial.com/posts/2015-12-06-Counterexamples.html][Counterexamples of Type Classes]]
+*** More
+- [[https://en.wikibooks.org/wiki/Haskell][Haskell wikibook section on Monads]]
+** Error Handling
+*** Using Either for errors
+There are quite a few ways to indicate and handle errors in Haskell.
+We are going to look at one solution: using the type [[https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-Either.html][Either]]. Either is defined like this:
+
+#+BEGIN_SRC haskell
+data Either a b
+  = Left a
+  | Right b
+#+END_SRC
+
+Simply put, a value of type ~Either a b~ can contain either a value of type ~a~, or a value of type ~b~.
+Well can tell them apart from the contructor used.
+
+#+BEGIN_SRC haskell
+Left True :: Either Bool b
+Right 'a' :: Either a Char
+#+END_SRC
+
+Using this type, we can represent computations that may fail by using ~Either~ with one type to represent error values
+and the other type to represent the values we want if the computation succeeds.
+
+For example, let's say that we want to parse a ~String~ as a decimal digit to an ~Int~. We have two possible failures:
+
+1. The string contains more than one character
+1. The string is empty
+2. The character is not one of 0,1,2,3,4,5,6,7,8,9
+
+We can represent this as a type
+
+#+BEGIN_SRC haskell
+data ParseDigitError
+  = EmptyString
+  | StringIsTooLong
+  | NotADigit Char
+  deriving Show
+#+END_SRC
+
+And our function can have the type
+
+#+BEGIN_SRC haskell
+parseDigit :: String -> Either ParseDigitError Int
+#+END_SRC
+
+Now when we check our string we can return ~Left~ on error and ~Right~ on successful parsing.
+
+
+#+BEGIN_SRC haskell
+parseDigit :: String -> Either ParseDigitError Int
+parseDigit str = case str of
+  -- empty string
+  [] -> Left StringIsTooLong
+  -- more than one character
+  _ : _ : _ -> Left StringIsTooLong
+  [c] ->
+    if elem c "0123456789"
+      then Right (read [c])
+      else Left (NotADigit c)
+#+END_SRC
+
+~Either a~ is also an instance of ~Functor~, ~Applicative~, and ~Monad~, so we have some combinators to work with
+if we want to combine these kind of computations.
+
+For example, we can use our function to parse an integer by trying to
+parse each character (using ~traverse~) and then use a function to sum them all together
+by applying it to the ~Int~ value using ~fmap~.
+
+#+BEGIN_SRC haskell
+parseInteger :: String -> Either ParseDigitError Int
+parseInteger str =
+  let
+    -- We use (:[]) first because each element of a `String` is a `Char` and our functions works on `String`.
+    -- This also means that in this case only NotADigit error can be return, which is still fine.
+    digits = traverse (parseDigit . (:[])) str
+  in
+    fmap
+      (foldr (+) 0 . zipWith (\e n -> 10 ^ e * n) [0..] . reverse)
+      digits
+#+END_SRC
+
+Try it!
+
+
+Note that since ~Either~ has kind ~Type -> Type -> Type~ and ~Functor~, ~Applicative~ and ~Monad~
+expect something of kind ~Type -> Type~, we can only create instances for ~Either a~ and not ~Either~.
+
+This means that when we use, for example, ~<*>~ which has the type
+
+#+BEGIN_SRC haskell
+(<*>) :: Applicative f => f (a -> b) -> f a -> f b
+#+END_SRC
+
+we replace ~f~ with ~Either a~ and not ~Either~:
+
+#+BEGIN_SRC haskell
+-- We'll use `e` for the left type of the either instead of `a` here because `a` is already taken
+(<*>) :: Either e (a -> b) -> Either e a -> Either e b
+#+END_SRC
+
+This means that ~e~ must be the same. If you want, for example, to use two different error types,
+two approaches you can use are:
+
+1. Replace them with one big ADT that contain both errors
+2. Make one ADT that combines both types just like ~Either~ does with ~a~ and ~b~
+   and use the function ~first~ from [[https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-Bifunctor.html][Data.Bifunctor]] to convert from one error type to the other.
+   (~first~ is like ~fmap~ but for the first type variable in ~Either~)
+
+*** Exceptions
+- [[https://web.archive.org/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web/20180121162424/http://chimera.labs.oreilly.com:80/books/1230000000929/ch08.html][Exceptions]]
+*** Exercises
+- Revise your [[#rpn-calculator][RPN Calculator]] to use ~Either~ to terminate early due to errors.
+** Debugging
+- [[https://en.wikibooks.org/wiki/Haskell/Debugging][Using Traces]]
+** Laziness
+- [[http://blog.ezyang.com/2011/04/the-haskell-heap/][The Haskell Heap]]
+- [[https://web.archive.org/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web/20180117015259/http://chimera.labs.oreilly.com:80/books/1230000000929/ch02.html][Lazy Evaluation and Weak Head Normal Form]]
+- [[https://two-wrongs.com/how-laziness-works][How laziness works - a tour through Haskell IRs]]
+** Performance
+*** Resources
+- [[https://en.wikibooks.org/wiki/Haskell/Performance_introduction][Introduction]]
+- [[https://two-wrongs.com/on-competing-with-c-using-haskell.html][On Competing With C Using Haskell]]
+- [[https://stackoverflow.com/questions/32123475/profiling-builds-with-stack][Profiling Builds with Stack]]
+- [[http://book.realworldhaskell.org/read/profiling-and-optimization.html][Profiling and Optimization]]
+- [[http://neilmitchell.blogspot.com/2015/09/detecting-space-leaks.html][Detecting Space Leaks]]
+*** Data Structures
+
+The choice of a data structure is determined by the properties and the algorithms used.
+
+Single-linked lists are a fairly ubiquious data structure in Haskell.
+
+Due to the simplicity and their syntactic sugar, they are used all over the place - often when they are not a good choice.
+
+Lists are good for:
+
+1. You only need to add or take the beginning of the list (consing), which is O(1)
+2. You use map, filter, zip and folds, which are O(N) anyway and are subject to operation fusion (aka. ~map f . map g = map (f . g)~
+3. Your list is really small and is not expected to grow
+4. Your list is infinite
+
+Lists are not good if:
+
+1. You use ~lookup~ - use ~Map~
+2. You want the elements to be unique - use ~Set~
+3. You expect the list to have at least one argument, use ~NonEmpty~
+4. You use append or concat, use ~DList~ or ~Seq~
+5. You use sort with non-unique values, use ~Seq~
+
+- [[http://dev.stephendiehl.com/hask/#data-structures][More Information]]
+** Monad Transformers
+*** Overview
+Functors and applicative interfaces [[https://hackage.haskell.org/package/transformers-0.3.0.0/docs/Data-Functor-Compose.html][can be composed easily]], but monads cannot.
+
+Monad transformers are a way to compose the capabilities of multiple type's monadic interface to one type.
+
+- [[https://two-wrongs.com/a-gentle-introduction-to-monad-transformers][A Gentle Introduction to Monad Transformers]]
+- [[https://www.schoolofhaskell.com/user/commercial/content/monad-transformers][School of Haskell - Monad Transformers]]
+- [[https://blog.jle.im/entry/mtl-is-not-a-monad-transformer-library.html][mtl is Not a Monad Transformer Library]]
+*** Exercises
+- To your [[#rpn-calculator][RPN Calculator]] REPL:
+  - Use ~Either~ to terminate an evaluation of an expression early when encountering errors
+  - Add the ~Reader~ interface to thread through the evaluation the build-in operations
+  - Add the ability for the user to define new words (with the syntax: ~: <word> <expressions>~)
+** GHC Language Extensions
+Haskell is a standartized programming language. The last standard is [[https://www.haskell.org/onlinereport/haskell2010/][Haskell 2010]].
+GHC, the most popular Haskell compiler, contains more features than what's available in Haskell 2010.
+To use those features, we must tell the compiler that we want to use them.
+We do this by invoking a compiler flag or adding a ~LANGUAGE~ pragma at the top of the source file.
+
+- [[https://limperg.de/ghc-extensions/][A Guide to GHC's Extensions]]
+
+** Functional Patterns
+*** Effectful outer layer, Uneffectful core
+Code that does no effects is easier to test, debug and reason about.
+
+Keeping most of our program's logic uneffectful makes it more flexible.
+
+But programs still need to interact with the outside world.
+
+For that, we can create an outer layer that is responsible for interacting with
+the user and dispatching the right logic functions.
+
+Notice this pattern in these [[http://www.haskellforall.com/2015/10/basic-haskell-examples.html][Basic Haskell Exmaples]].
+*** Compose Smaller Things to Bigger Things
+- [[https://wiki.haskell.org/Combinator_pattern][Combinator Pattern]]
+*** Type Classes Patterns
+Type Classes such as ~Monoid~, ~Functor~, ~Applicative~ and ~Monad~ can be thought of as patterns.
+They are all around us and are at the core API of many libraries.
+
+You can find them when doing web development, streaming, IO, concurrency,
+parsing, error handling, testing, build systems and more. 
+
+Examples:
+
+- [[https://kseo.github.io/posts/2014-01-16-applicative-parsing.html][Applicative Parsing]]
+- [[https://hackage.haskell.org/package/lucid-2.9.10/docs/Lucid.html][Lucid - a DSL for writing HTML]]
+- [[https://web.archive.org/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web/20171114084950/http://chimera.labs.oreilly.com:80/books/1230000000929/ch10.html][Software Transactional Memory]]
+*** More
+[[https://www.reddit.com/r/haskell/comments/5r271m/haskell_design_patterns/][Discussion on Reddit]]
+** More
+*** [[http://gilmi.me/blog/post/2015/02/25/after-lyah][More resources, tutorials and project ideas]]
+*** Some Advanced Topics
+These may not be as useful for your everyday programming tasks, but it's nice to know they exist when you need them
+
+- [[https://en.wikibooks.org/wiki/Haskell/FFI][Foreign Function Interface]]
+- [[https://chrisdone.com/posts/data-typeable][Generic Programming]]
+- [[https://markkarpov.com/tutorial/th.html][Meta Programming with Template Haskell]]
+- [[https://www.parsonsmatt.org/2017/04/26/basic_type_level_programming_in_haskell.html][Type Level Programming]]
+- [[https://skillsmatter.com/skillscasts/4251-lenses-compositional-data-access-and-manipulation][Lenses]]
+*** References and Tools
+- [[https://haskell-lang.org/tutorial/operators][Operators Glossary]]
+- [[http://hoogle.haskell.org][Hoogle]]
+- [[http://dev.stephendiehl.com/hask/][What I Wish I Knew Learning Haskell]]
+- [[https://haskellweekly.news/][Haskell Weekly News]]
+*** Simple Example Programs
+- [[https://gist.github.com/soupi/199a16be6e2071c3b724][Simple File Reader]]
+- [[https://gitlab.com/gilmi/sdl2-snake][Snake Game]]
+- [[https://gitlab.com/gilmi/hen][Static Blog Generator]]
+- [[https://gitlab.com/gilmi/sod-cmus][Simplified Web Interface to cmus]]
+- [[https://gitlab.com/gilmi/imgs][Image Server]]
+- [[https://gitlab.com/gilmi/plaste][paste-bin]]
+*** A Few Cool Open-Source Applications
+Here are a few cool open source applications written in Haskell that might accept contributions if you're interested.
+
+- [[https://github.com/aurapm/aura/][Aura]] - A package manager for Arch Linux and its AUR.
+- [[https://github.com/google/codeworld][CodeWorld]] - CodeWorld is an educational environment using Haskell.
+- [[http://hledger.org/][hledger]] -  Friendly, robust, plain text accounting.
+- [[https://owickstrom.github.io/komposition][Komposition]] - The video editor built for screencasters
+- [[https://github.com/matterhorn-chat/matterhorn][Matterhorn]] - A terminal client for the Mattermost chat system.
+- [[https://github.com/lettier/movie-monad][Movie-Monad]] - A free and simple to use video player made with Haskell.
+- [[https://github.com/jaspervdj/patat][patat]] - Terminal-based presentations using Pandoc.
+- [[https://github.com/begriffs/postgrest][postgrest]] - REST API for any Postgres database.
+- [[https://github.com/purescript/purescript][PureScript]] - A strongly-typed language that compiles to Javascript.
+- [[https://github.com/agentm/project-m36][Project:m36]] - A relational algebra engine as inspired by the writings of Chris Date.
+- [[https://github.com/cdepillabout/termonad][termonad]] - A terminal emulator configurable in Haskell.
+- [[https://github.com/tidalcycles/Tidal][Tidal]] - Language for live coding of pattern.
