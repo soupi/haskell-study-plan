@@ -512,7 +512,7 @@ Key idea:
 
 *These are abstract algebraic structures*
 
-The define operations and laws on them such as identity and associativity.
+They define operations and laws on them such as identity and associativity.
 
 Many patterns fit these structures, making them useful as abstractions!
 
@@ -675,19 +675,24 @@ two approaches you can use are:
 - [[https://web.archive.org/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web/20180117015259/http://chimera.labs.oreilly.com:80/books/1230000000929/ch02.html][Lazy Evaluation and Weak Head Normal Form]]
 - [[https://two-wrongs.com/how-laziness-works][How laziness works - a tour through Haskell IRs]]
 ** Performance
+Haskell can be fast and have a low memory foot-print in many scenarios even when you use immutable data structures
+and uneffectful code.
+
+It is a good idea to keep your code idiomatic and measure before you decide to use mutation and other fancier methods.
+You may not need it!
 *** Resources
 - [[https://en.wikibooks.org/wiki/Haskell/Performance_introduction][Introduction]]
 - [[https://two-wrongs.com/on-competing-with-c-using-haskell.html][On Competing With C Using Haskell]]
+- [[http://slides.com/fp-ctd/lecture-10#/][Haskell ITMO course at CTD - Lecture 10]]
 - [[https://stackoverflow.com/questions/32123475/profiling-builds-with-stack][Profiling Builds with Stack]]
 - [[http://book.realworldhaskell.org/read/profiling-and-optimization.html][Profiling and Optimization]]
 - [[http://neilmitchell.blogspot.com/2015/09/detecting-space-leaks.html][Detecting Space Leaks]]
 *** Data Structures
 
-The choice of a data structure is determined by the properties and the algorithms used.
+The choice of a data structure is determined by the properties of your data and the algorithms used.
 
 Single-linked lists are a fairly ubiquious data structure in Haskell.
-
-Due to the simplicity and their syntactic sugar, they are used all over the place - often when they are not a good choice.
+Due to their simplicity and syntactic sugar, they're used all over the place - often when they're not a good choice.
 
 Lists are good for:
 
@@ -711,6 +716,7 @@ Functors and applicative interfaces [[https://hackage.haskell.org/package/transf
 
 Monad transformers are a way to compose the capabilities of multiple type's monadic interface to one type.
 
+- [[http://slides.com/fp-ctd/lecture-9#][Haskell ITMO course at CTD - Lecture 9]]
 - [[https://two-wrongs.com/a-gentle-introduction-to-monad-transformers][A Gentle Introduction to Monad Transformers]]
 - [[https://www.schoolofhaskell.com/user/commercial/content/monad-transformers][School of Haskell - Monad Transformers]]
 - [[https://blog.jle.im/entry/mtl-is-not-a-monad-transformer-library.html][mtl is Not a Monad Transformer Library]]
@@ -726,7 +732,6 @@ To use those features, we must tell the compiler that we want to use them.
 We do this by invoking a compiler flag or adding a ~LANGUAGE~ pragma at the top of the source file.
 
 - [[https://limperg.de/ghc-extensions/][A Guide to GHC's Extensions]]
-
 ** Functional Patterns
 *** Effectful outer layer, Uneffectful core
 Code that does no effects is easier to test, debug and reason about.
