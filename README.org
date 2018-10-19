@@ -119,6 +119,7 @@ Here are a few useful packages you might want to use when building software with
     - [[https://github.com/soupi/minimal-haskell-emacs/tree/evil][+ vim bindings]]
   - [[https://github.com/dramforever/vscode-ghc-simple][VSCode]]
   - [[https://www.reddit.com/r/haskell/comments/9bxbwp/which_ide_are_you_using_for_hakell/][More Options]]
+- [[https://www.ahri.net/practical-haskell-programs-from-scratch/][Practical Haskell programs from scratch - a quick and easy guide]]
 ** Exercises
 *** Lists
 - [[https://wiki.haskell.org/99_questions/1_to_10][1-10 Haskell Problems]]
@@ -202,7 +203,7 @@ Every expression has a concrete type.
 
 Kinds are the types of types.
 
-Definition of kinds in GHC:
+This is a simplified view of how kinds are represented in GHC:
 
 #+BEGIN_SRC haskell
 data Kind
@@ -210,7 +211,7 @@ data Kind
   | KArr Kind Kind -- KArr in Haskell this is written as: ->
 #+END_SRC
 
-Think of ~Type~ being the kind of concrete types, and ~KArr~ is a function from ~Kind~ to ~Kind~.
+Think of ~Type~ being the kind of concrete (or inhabited) types, and ~KArr~ is a function from ~Kind~ to ~Kind~.
 
 If a type is parametarized (when defining the ADT you pass it parameters)
 then in order for it to be concrete you have to supply it with all the types it expects to get.
@@ -236,7 +237,9 @@ and has the Values ~True~ and ~False~.
 
 ~Maybe Bool~ is a concrete type because all of the paramters for ~Maybe~ have been supplied.
 
-More examples:
+An expression can only have a type with the kind ~Type~.
+
+Examples:
 
 | Value     | Type                   | Kind                           | Comments                             |
 |-----------+------------------------+--------------------------------+--------------------------------------|
@@ -312,6 +315,8 @@ We can write all kinds of generic algorithms on this data type and reuse them
 for different scenarios and needs simply by pluging in a different ~f~!
 
 We'll see more of those after we talk about type classes.
+
+There is more to Haskell's kinds system, and a really good article about it is linked later on the tutorial.
 
 And by the way, the real name of ~Rec~ is [[https://hackage.haskell.org/package/free-5.1/docs/Control-Comonad-Cofree.html][Cofree]].
 
@@ -598,17 +603,17 @@ data ParseDigitError
 And our function can have the type
 
 #+BEGIN_SRC haskell
-parseDigit :: String -> Either ParseDigitError Int
+parseDigit :: String -> Either ParseDigitError Integer
 #+END_SRC
 
 Now when we check our string we can return ~Left~ on error and ~Right~ on successful parsing.
 
 
 #+BEGIN_SRC haskell
-parseDigit :: String -> Either ParseDigitError Int
+parseDigit :: String -> Either ParseDigitError Integer
 parseDigit str = case str of
   -- empty string
-  [] -> Left StringIsTooLong
+  [] -> Left EmptyString
   -- more than one character
   _ : _ : _ -> Left StringIsTooLong
   [c] ->
@@ -625,16 +630,22 @@ parse each character (using ~traverse~) and then use a function to sum them all 
 by applying it to the ~Int~ value using ~fmap~.
 
 #+BEGIN_SRC haskell
-parseInteger :: String -> Either ParseDigitError Int
-parseInteger str =
-  let
-    -- We use (:[]) first because each element of a `String` is a `Char` and our functions works on `String`.
-    -- This also means that in this case only NotADigit error can be return, which is still fine.
-    digits = traverse (parseDigit . (:[])) str
-  in
-    fmap
-      (foldr (+) 0 . zipWith (\e n -> 10 ^ e * n) [0..] . reverse)
-      digits
+parseInteger :: String -> Either ParseDigitError Integer
+parseInteger str = do
+  if null str
+    then Left EmptyString
+    else
+  -- We use (:[]) first because each element of a `String` is a `Char` and our functions works on `String`.
+  -- This also means that in this case only NotADigit error can be return, which is still fine.
+      let
+        digits = traverse (parseDigit . (:[])) str
+      in
+        fmap
+          ( foldr (+) 0
+          . zipWith (\e n -> 10 ^ e * n) [0..]
+          . reverse
+          )
+          digits
 #+END_SRC
 
 Try it!
@@ -768,7 +779,7 @@ These may not be as useful for your everyday programming tasks, but it's nice to
 - [[https://en.wikibooks.org/wiki/Haskell/FFI][Foreign Function Interface]]
 - [[https://chrisdone.com/posts/data-typeable][Generic Programming]]
 - [[https://markkarpov.com/tutorial/th.html][Meta Programming with Template Haskell]]
-- [[https://www.parsonsmatt.org/2017/04/26/basic_type_level_programming_in_haskell.html][Type Level Programming]]
+- [[https://diogocastro.com/blog/2018/10/17/haskells-kind-system-a-primer/][Haskell's kind system - a primer]] and [[https://www.parsonsmatt.org/2017/04/26/basic_type_level_programming_in_haskell.html][Type Level Programming]]
 - [[https://skillsmatter.com/skillscasts/4251-lenses-compositional-data-access-and-manipulation][Lenses]]
 *** References and Tools
 - [[https://haskell-lang.org/tutorial/operators][Operators Glossary]]
