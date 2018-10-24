@@ -125,14 +125,13 @@ Here are a few useful packages you might want to use when building software with
 - [[https://wiki.haskell.org/99_questions/1_to_10][1-10 Haskell Problems]]
 - [[https://wiki.haskell.org/99_questions/11_to_20][11-20 Haskell Problems]]
 *** Sort a List
-Sort a list of ints by inserting all its elements into a binary tree.
+Sort a list of ints by inserting all its elements into a binary search tree.
 
-1. Define a data type of a binary tree
-2. Define the types of operations relevant to the task (sort, insert, insertList, flatten, display)
+1. Define a data type of a binary search tree
+2. Write the type signatures of the functions relevant to the task (sort, insertElementToTree, listToTree, flatten, display, etc.)
 3. Implement these functions
 
-Think of scenarios and unit test your functions
-
+Think of scenarios and test your functions.
 *** Dict
 Compress and decompress a file using dict compression.
 
@@ -151,7 +150,6 @@ For the compress command, the output should be the compressed items ((1) and (2)
 For the decompress command, the output should be the original text.
 
 *Note*: You can use the functions ~read~ and ~show~ to convert from/to some types and ~String~.
-
 *** PPM
 Create a program that will output a [[https://en.wikipedia.org/wiki/Netpbm_format#PPM_example][PPM file]].
 
@@ -799,7 +797,7 @@ Here are a few cool open source applications written in Haskell that might accep
 - [[https://github.com/aurapm/aura/][Aura]] - A package manager for Arch Linux and its AUR.
 - [[https://github.com/google/codeworld][CodeWorld]] - CodeWorld is an educational environment using Haskell.
 - [[http://hledger.org/][hledger]] -  Friendly, robust, plain text accounting.
-- [[https://owickstrom.github.io/komposition][Komposition]] - The video editor built for screencasters
+- [[https://owickstrom.github.io/komposition][Komposition]] - The video editor built for screencasters.
 - [[https://github.com/matterhorn-chat/matterhorn][Matterhorn]] - A terminal client for the Mattermost chat system.
 - [[https://github.com/lettier/movie-monad][Movie-Monad]] - A free and simple to use video player made with Haskell.
 - [[https://github.com/jaspervdj/patat][patat]] - Terminal-based presentations using Pandoc.
