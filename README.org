@@ -169,7 +169,7 @@ Example execution:
 
 #+BEGIN_SRC
 $ rpn-calc 5 7 2 negate + *
-0
+25
 #+END_SRC
 ** Lambda Calculus
 *** Overview
