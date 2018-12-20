@@ -777,7 +777,8 @@ These may not be as useful for your everyday programming tasks, but it's nice to
 - [[https://en.wikibooks.org/wiki/Haskell/FFI][Foreign Function Interface]]
 - [[https://chrisdone.com/posts/data-typeable][Generic Programming]]
 - [[https://markkarpov.com/tutorial/th.html][Meta Programming with Template Haskell]]
-- [[https://diogocastro.com/blog/2018/10/17/haskells-kind-system-a-primer/][Haskell's kind system - a primer]] and [[https://www.parsonsmatt.org/2017/04/26/basic_type_level_programming_in_haskell.html][Type Level Programming]]
+- [[https://diogocastro.com/blog/2018/10/17/haskells-kind-system-a-primer/][Haskell's kind system - a primer]] and [[https://www.parsonsmatt.org/2017/04/26/basic_type_level_programming_in_haskell.html][Basic Type Level Programming]]
+- [[https://blog.sumtypeofway.com/an-introduction-to-recursion-schemes/][Recursion Schemes]]
 - [[https://skillsmatter.com/skillscasts/4251-lenses-compositional-data-access-and-manipulation][Lenses]]
 *** References and Tools
 - [[https://haskell-lang.org/tutorial/operators][Operators Glossary]]
