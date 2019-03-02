@@ -69,7 +69,7 @@ If you prefer a gentler introduction, try one of these resources:
     - [[#a-few-cool-open-source-applications][A Few Cool Open-Source Applications]]
 
 ** Beginning
-1. [[https://haskell-lang.org/get-started][Get Started]]
+1. [[https://haskell.fpcomplete.com/get-started][Get Started]]
 2. [[https://soupi.github.io/rfc/reading_simple_haskell][Reading Simple Haskell]]
 3. [[https://soupi.github.io/rfc/writing_simple_haskell][Writing Simple Haskell]]
 4. [[https://en.wikibooks.org/wiki/Haskell/Indentation][Indentation]]
@@ -108,9 +108,8 @@ Here are a few useful packages you might want to use when building software with
 - [[http://hackage.haskell.org/package/network][network]] - Low-level networking interface.
 - [[http://hackage.haskell.org/package/random][random]] - random number library.
 
-[[https://haskell-lang.org/libraries][And more]].
+[[https://hackage.haskell.org/][And more]].
 ** Tools
-- [[https://haskell-lang.org/tutorial/stack-play][How to Play with Stack]]
 - [[https://en.wikibooks.org/wiki/Haskell/Using_GHCi_effectively][Using GHCi Effectively]]
 - [[https://www.haskell.org/hoogle/][Hoogle]]
 - [[https://github.com/ndmitchell/ghcid#readme][GHCid]]
@@ -674,14 +673,14 @@ two approaches you can use are:
    (~first~ is like ~fmap~ but for the first type variable in ~Either~)
 
 *** Exceptions
-- [[https://web.archive.org/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web/20180121162424/http://chimera.labs.oreilly.com:80/books/1230000000929/ch08.html][Exceptions]]
+- [[https://www.oreilly.com/library/view/parallel-and-concurrent/9781449335939/ch08.html#sec_exceptions][Exceptions]]
 *** Exercises
 - Revise your [[#rpn-calculator][RPN Calculator]] to use ~Either~ to terminate early due to errors.
 ** Debugging
 - [[https://en.wikibooks.org/wiki/Haskell/Debugging][Using Traces]]
 ** Laziness
 - [[http://blog.ezyang.com/2011/04/the-haskell-heap/][The Haskell Heap]]
-- [[https://web.archive.org/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web/20180117015259/http://chimera.labs.oreilly.com:80/books/1230000000929/ch02.html][Lazy Evaluation and Weak Head Normal Form]]
+- [[https://www.oreilly.com/library/view/parallel-and-concurrent/9781449335939/ch02.html#sec_par-eval-whnf][Lazy Evaluation and Weak Head Normal Form]]
 - [[https://two-wrongs.com/how-laziness-works][How laziness works - a tour through Haskell IRs]]
 ** Performance
 Haskell can be fast and have a low memory foot-print in many scenarios even when you use immutable data structures
@@ -766,7 +765,7 @@ Examples:
 
 - [[https://kseo.github.io/posts/2014-01-16-applicative-parsing.html][Applicative Parsing]]
 - [[https://hackage.haskell.org/package/lucid-2.9.10/docs/Lucid.html][Lucid - a DSL for writing HTML]]
-- [[https://web.archive.org/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web20171204024223/http://chimera.labs.oreilly.com:80/web/20171114084950/http://chimera.labs.oreilly.com:80/books/1230000000929/ch10.html][Software Transactional Memory]]
+- [[https://www.oreilly.com/library/view/parallel-and-concurrent/9781449335939/ch10.html][Software Transactional Memory]]
 *** More
 [[https://www.reddit.com/r/haskell/comments/5r271m/haskell_design_patterns/][Discussion on Reddit]]
 ** More
@@ -781,7 +780,7 @@ These may not be as useful for your everyday programming tasks, but it's nice to
 - [[https://blog.sumtypeofway.com/an-introduction-to-recursion-schemes/][Recursion Schemes]]
 - [[https://skillsmatter.com/skillscasts/4251-lenses-compositional-data-access-and-manipulation][Lenses]]
 *** References and Tools
-- [[https://haskell-lang.org/tutorial/operators][Operators Glossary]]
+- [[https://haskell.fpcomplete.com/tutorial/operators][Operators Glossary]]
 - [[http://hoogle.haskell.org][Hoogle]]
 - [[http://dev.stephendiehl.com/hask/][What I Wish I Knew Learning Haskell]]
 - [[https://haskellweekly.news/][Haskell Weekly News]]
