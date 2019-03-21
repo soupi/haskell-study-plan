@@ -416,7 +416,7 @@ main =
       greet name = "Hello, " ++ name ++ "!"
     in
       getLine >>= \name ->
-        putStrLn ("Hello, " ++ name ++ "!")
+        putStrLn (greet name)
 #+END_SRC
 
 1. A regular line that does not create a binding will be sequenced to the next using ~>>~
@@ -439,7 +439,7 @@ of the functions presented here are more general. We'll discuss that later.
     - If the user guess is too high, say it's too high.
     - If the user guess is too low, say it's too low.
     - Hint: you can use [[https://hackage.haskell.org/package/random-1.1/docs/System-Random.html#v:randomRIO][randomRIO]] to generate a random number
-  - Bonus: Remember the amount of times the user guess and print that at the end of the game.
+  - Bonus: Remember the amount of times the user guesses and print that at the end of the game.
     - Hint: In pure functional programming we use recursion to emulate state
   - Bonus: Remember the user's guesses and tell them if they already tried that guess.
 - Implement a [[https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop][REPL]] interface to your [[#rpn-calculator][RPN Calculator]]
@@ -447,7 +447,7 @@ of the functions presented here are more general. We'll discuss that later.
     and return the evaluations for them
 ** Type classes
 *** Overview
-We use type classes to describe groups of types that all behave in a similar way and refer to the generically.
+We use type classes to describe groups of types that all behave in a similar way and refer to them generically.
 
 A good type class will have operations on the type and laws attached to it - similar to abstract algebra.
 
@@ -484,11 +484,11 @@ class instances should be defined in the same place as the type class definition
 Failing to do that may cause [[https://wiki.haskell.org/Orphan_instance][Orphan Instances]].
 
 
-| Abstraction             | definition                          | different substitutions                                     | comments                                                                                   |
-|-------------------------+-------------------------------------+-------------------------------------------------------------+--------------------------------------------------------------------------------------------|
-| No polymorphism         | func1 ::          Int -> Int -> Int | none                                                        | we know exactly which types are used and can do all kinds of operations on them            |
-| Parametric polymorphism | func2 ::            a ->   a ->   a | ~a~ can be any type                                         | We don't know which types ~a~ and ~b~ are and can't do any type related operations on them |
-| Type classes (ad-hoc)   | func3 :: Ord a =>   a ->   a ->   a | ~a~ can be any type that can be ordered (Bool, Int, String) | anything to the left of ~=>~ is a constraint on the type                                   |
+| Abstraction             | definition                          | different substitutions                                     | comments                                                                        |
+|-------------------------+-------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------|
+| No polymorphism         | func1 ::          Int -> Int -> Int | none                                                        | we know exactly which types are used and can do all kinds of operations on them |
+| Parametric polymorphism | func2 ::            a ->   a ->   a | ~a~ can be any type                                         | We don't know which type ~a~ is and can't do any type related operations on it  |
+| Type classes (ad-hoc)   | func3 :: Ord a =>   a ->   a ->   a | ~a~ can be any type that can be ordered (Bool, Int, String) | anything to the left of ~=>~ is a constraint on the type                        |
 
 *** More Material
 
