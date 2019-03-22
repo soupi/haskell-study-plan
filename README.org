@@ -791,6 +791,7 @@ These may not be as useful for your everyday programming tasks, but it's nice to
 - [[https://gitlab.com/gilmi/sod-cmus][Simplified Web Interface to cmus]]
 - [[https://gitlab.com/gilmi/imgs][Image Server]]
 - [[https://gitlab.com/gilmi/plaste][paste-bin]]
+- [[https://github.com/jackoe/discourse-tui][A terminal UI for discourse]]
 *** A Few Cool Open-Source Applications
 Here are a few cool open source applications written in Haskell that might accept contributions if you're interested.
 
