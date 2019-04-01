@@ -694,7 +694,7 @@ You may not need it!
 - [[http://slides.com/fp-ctd/lecture-10#/][Haskell ITMO course at CTD - Lecture 10]]
 - [[https://stackoverflow.com/questions/32123475/profiling-builds-with-stack][Profiling Builds with Stack]]
 - [[http://book.realworldhaskell.org/read/profiling-and-optimization.html][Profiling and Optimization]]
-- [[http://neilmitchell.blogspot.com/2015/09/detecting-space-leaks.html][Detecting Space Leaks]]
+- [[https://slides.com/sumith1896/space-leaks-in-haskell][Space Leaks in Haskell]] and [[http://neilmitchell.blogspot.com/2015/09/detecting-space-leaks.html][Detecting Space Leaks]]
 *** Data Structures
 
 The choice of a data structure is determined by the properties of your data and the algorithms used.
