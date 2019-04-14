@@ -785,6 +785,7 @@ These may not be as useful for your everyday programming tasks, but it's nice to
 - [[http://dev.stephendiehl.com/hask/][What I Wish I Knew Learning Haskell]]
 - [[https://haskellweekly.news/][Haskell Weekly News]]
 *** Simple Example Programs
+- [[https://anardil.net/tag/coreutils.html][Unix core utilities in Haskell]]
 - [[https://gist.github.com/soupi/199a16be6e2071c3b724][Simple File Reader]]
 - [[https://gitlab.com/gilmi/sdl2-snake][Snake Game]]
 - [[https://gitlab.com/gilmi/hen][Static Blog Generator]]
