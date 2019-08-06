@@ -807,5 +807,6 @@ Here are a few cool open source applications written in Haskell that might accep
 - [[https://github.com/begriffs/postgrest][postgrest]] - REST API for any Postgres database.
 - [[https://github.com/purescript/purescript][PureScript]] - A strongly-typed language that compiles to Javascript.
 - [[https://github.com/agentm/project-m36][Project:m36]] - A relational algebra engine as inspired by the writings of Chris Date.
+- [[https://taskell.app/][Taskell]] - Command-line Kanban board/task management.
 - [[https://github.com/cdepillabout/termonad][termonad]] - A terminal emulator configurable in Haskell.
 - [[https://github.com/tidalcycles/Tidal][Tidal]] - Language for live coding of pattern.
