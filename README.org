@@ -796,6 +796,7 @@ These may not be as useful for your everyday programming tasks, but it's nice to
 *** A Few Cool Open-Source Applications
 Here are a few cool open source applications written in Haskell that might accept contributions if you're interested.
 
+- [[https://github.com/therewillbecode/haskell-poker][Haskell-Poker]] - A poker site built with Haskell.
 - [[https://github.com/aurapm/aura/][Aura]] - A package manager for Arch Linux and its AUR.
 - [[https://github.com/google/codeworld][CodeWorld]] - CodeWorld is an educational environment using Haskell.
 - [[https://lettier.github.io/gifcurry/][gifcurry]] - Your open source video to GIF maker built with Haskell.
