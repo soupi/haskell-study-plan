@@ -176,7 +176,8 @@ The lambda calculus is a minimalistic language that is in the core of functional
 
 It presents a minimalistic framework to learn about many common features in functional languages.
 
-- [[http://www.inf.fu-berlin.de/lehre/WS03/alpi/lambda.pdf][Use this tutorial to learn about the lambda calculus]]
+- [[http://www.inf.fu-berlin.de/lehre/WS03/alpi/lambda.pdf][A tutorial on the lambda calculus]]
+- [[https://gitlab.cecs.anu.edu.au/pages/2019-S1/courses/comp1100/lectures/lambda.pdf][Slides on the lambda calculus]]
 - [[https://en.wikipedia.org/wiki/Lambda_calculus][Wikipedia article on the Lambda Calculus]]
 
 *** Exercises
