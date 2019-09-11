@@ -740,6 +740,7 @@ GHC, the most popular Haskell compiler, contains more features than what's avail
 To use those features, we must tell the compiler that we want to use them.
 We do this by invoking a compiler flag or adding a ~LANGUAGE~ pragma at the top of the source file.
 
+- [[https://impurepics.com/posts/2019-08-01-haskell-extensions.html][Haskell Extensions in Pictures]]
 - [[https://limperg.de/ghc-extensions/][A Guide to GHC's Extensions]]
 ** Functional Patterns
 *** Effectful outer layer, Uneffectful core
