@@ -692,6 +692,7 @@ You may not need it!
 *** Resources
 - [[https://en.wikibooks.org/wiki/Haskell/Performance_introduction][Introduction]]
 - [[https://two-wrongs.com/on-competing-with-c-using-haskell.html][On Competing With C Using Haskell]]
+- [[https://github.com/ChrisPenner/wc][wc - Counting Words With Haskell]]
 - [[http://slides.com/fp-ctd/lecture-10#/][Haskell ITMO course at CTD - Lecture 10]]
 - [[https://stackoverflow.com/questions/32123475/profiling-builds-with-stack][Profiling Builds with Stack]]
 - [[http://book.realworldhaskell.org/read/profiling-and-optimization.html][Profiling and Optimization]]
