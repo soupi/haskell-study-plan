@@ -690,13 +690,19 @@ and uneffectful code.
 It is a good idea to keep your code idiomatic and measure before you decide to use mutation and other fancier methods.
 You may not need it!
 *** Resources
+**** General
 - [[https://en.wikibooks.org/wiki/Haskell/Performance_introduction][Introduction]]
-- [[https://two-wrongs.com/on-competing-with-c-using-haskell.html][On Competing With C Using Haskell]]
-- [[https://github.com/ChrisPenner/wc][wc - Counting Words With Haskell]]
 - [[http://slides.com/fp-ctd/lecture-10#/][Haskell ITMO course at CTD - Lecture 10]]
+**** Profiling
 - [[https://stackoverflow.com/questions/32123475/profiling-builds-with-stack][Profiling Builds with Stack]]
 - [[http://book.realworldhaskell.org/read/profiling-and-optimization.html][Profiling and Optimization]]
 - [[https://slides.com/sumith1896/space-leaks-in-haskell][Space Leaks in Haskell]] and [[http://neilmitchell.blogspot.com/2015/09/detecting-space-leaks.html][Detecting Space Leaks]]
+- [[https://github.com/mpickering/eventlog2html][eventlog2html]]
+**** Case Studies
+- [[https://chrisdone.com/posts/fast-haskell-c-parsing-xml/][Fast Haskell: Competing with C at parsing XML]]
+- [[https://markkarpov.com/post/migrating-text-metrics.html][Migrating text metrics to pure Haskell]]
+- [[https://two-wrongs.com/on-competing-with-c-using-haskell.html][On Competing With C Using Haskell]]
+- [[https://github.com/ChrisPenner/wc][wc - Counting Words With Haskell]]
 *** Data Structures
 
 The choice of a data structure is determined by the properties of your data and the algorithms used.
