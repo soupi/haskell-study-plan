@@ -427,10 +427,11 @@ main =
 
 This is basically CPS (continuation passing style).
 
-| code                   | operator | type of the left side | type of the right side | comments                                                                                    |
-|------------------------+----------+-----------------------+------------------------+---------------------------------------------------------------------------------------------|
-| let gretting = "hello" | ~=~      | String                | String                 | ~=~ means both side are interchangeable (they both mean exactly the same thing)             |
-| name <- getLine        | ~<-~     | String                | IO String              | ~<-~ is syntactic sugar for ~>>=~ where we bind the *result* of the computation to the name |
+| code                    | operator | type of the left side | type of the right side | comments                                                                                    |
+|-------------------------+----------+-----------------------+------------------------+---------------------------------------------------------------------------------------------|
+| let gretting = "hello"  | ~=~      | String                | String                 | ~=~ means both side are interchangeable (they both mean exactly the same thing)             |
+| let mygetline = getLine | ~=~      | IO String             | IO String              | Here we just create a new name that is identical to ~getLine~. We are not running anything  |
+| name <- getLine         | ~<-~     | String                | IO String              | ~<-~ is syntactic sugar for ~>>=~ where we bind the *result* of the computation to the name |
 
 IO's API fits a pattern that can be seen in more types in Haskell, which is why the type signatures
 of the functions presented here are more general. We'll discuss that later.
