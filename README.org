@@ -761,7 +761,7 @@ But programs still need to interact with the outside world.
 For that, we can create an outer layer that is responsible for interacting with
 the user and dispatching the right logic functions.
 
-Notice this pattern in these [[http://www.haskellforall.com/2015/10/basic-haskell-examples.html][Basic Haskell Exmaples]].
+Notice this pattern in these [[http://www.haskellforall.com/2015/10/basic-haskell-examples.html][Basic Haskell Examples]].
 *** Compose Smaller Things to Bigger Things
 - [[https://wiki.haskell.org/Combinator_pattern][Combinator Pattern]]
 *** Type Classes Patterns
