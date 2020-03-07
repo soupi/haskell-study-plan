@@ -119,6 +119,7 @@ Here are a few useful packages you might want to use when building software with
   - [[https://github.com/dramforever/vscode-ghc-simple][VSCode]]
   - [[https://www.reddit.com/r/haskell/comments/9bxbwp/which_ide_are_you_using_for_hakell/][More Options]]
 - [[https://www.ahri.net/practical-haskell-programs-from-scratch/][Practical Haskell programs from scratch - a quick and easy guide]]
+- [[https://sakshamsharma.com/2018/03/haskell-proj-struct/][Structuring your first Haskell project with Stack]]
 ** Exercises
 *** Lists
 - [[https://wiki.haskell.org/99_questions/1_to_10][1-10 Haskell Problems]]
