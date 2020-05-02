@@ -60,6 +60,7 @@ If you prefer a gentler introduction, try one of these resources:
     - [[#effectful-outer-layer-uneffectful-core][Effectful outer layer, Uneffectful core]]
     - [[#compose-smaller-things-to-bigger-things][Compose Smaller Things to Bigger Things]]
     - [[#type-classes-patterns][Type Classes Patterns]]
+    - [[#parse-dont-validate][Parse, Don't Validate]]
     - [[#more-1][More]]
   - [[#more-2][More]]
     - [[#more-resources-tutorials-and-project-ideas][More resources, tutorials and project ideas]]
@@ -777,6 +778,8 @@ Examples:
 - [[https://kseo.github.io/posts/2014-01-16-applicative-parsing.html][Applicative Parsing]]
 - [[https://hackage.haskell.org/package/lucid-2.9.10/docs/Lucid.html][Lucid - a DSL for writing HTML]]
 - [[https://www.oreilly.com/library/view/parallel-and-concurrent/9781449335939/ch10.html][Software Transactional Memory]]
+*** Parse, Don't Validate
+- [[https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/][Parse, don't validate]]
 *** More
 [[https://www.reddit.com/r/haskell/comments/5r271m/haskell_design_patterns/][Discussion on Reddit]]
 ** More
