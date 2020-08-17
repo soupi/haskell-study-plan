@@ -65,7 +65,8 @@ If you prefer a gentler introduction, try one of these resources:
   - [[#more-2][More]]
     - [[#more-resources-tutorials-and-project-ideas][More resources, tutorials and project ideas]]
     - [[#some-advanced-topics][Some Advanced Topics]]
-    - [[#references-and-tools][References and Tools]]
+    - [[#references][References]]
+    - [[#news-aggregators][News Aggregators]]
     - [[#simple-example-programs][Simple Example Programs]]
     - [[#a-few-cool-open-source-applications][A Few Cool Open-Source Applications]]
 
@@ -783,7 +784,8 @@ Examples:
 *** More
 [[https://www.reddit.com/r/haskell/comments/5r271m/haskell_design_patterns/][Discussion on Reddit]]
 ** More
-*** [[http://gilmi.me/blog/post/2015/02/25/after-lyah][More resources, tutorials and project ideas]]
+*** More resources, tutorials and project ideas
+- [[http://gilmi.me/blog/post/2015/02/25/after-lyah][In this blog post]]
 *** Some Advanced Topics
 These may not be as useful for your everyday programming tasks, but it's nice to know they exist when you need them
 
@@ -793,11 +795,12 @@ These may not be as useful for your everyday programming tasks, but it's nice to
 - [[https://diogocastro.com/blog/2018/10/17/haskells-kind-system-a-primer/][Haskell's kind system - a primer]] and [[https://www.parsonsmatt.org/2017/04/26/basic_type_level_programming_in_haskell.html][Basic Type Level Programming]]
 - [[https://blog.sumtypeofway.com/an-introduction-to-recursion-schemes/][Recursion Schemes]]
 - [[https://skillsmatter.com/skillscasts/4251-lenses-compositional-data-access-and-manipulation][Lenses]]
-*** References and Tools
+*** References
 - [[https://haskell.fpcomplete.com/tutorial/operators][Operators Glossary]]
-- [[http://hoogle.haskell.org][Hoogle]]
 - [[http://dev.stephendiehl.com/hask/][What I Wish I Knew Learning Haskell]]
+*** News Aggregators
 - [[https://haskellweekly.news/][Haskell Weekly News]]
+- [[https://haskell.pl-a.net/][Haskell Planetarium]]
 *** Simple Example Programs
 - [[https://anardil.net/tag/coreutils.html][Unix core utilities in Haskell]]
 - [[https://gist.github.com/soupi/199a16be6e2071c3b724][Simple File Reader]]
