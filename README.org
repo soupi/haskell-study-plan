@@ -10,6 +10,9 @@ If you prefer a gentler introduction, try one of these resources:
 - [[https://en.wikibooks.org/wiki/Haskell][Haskell Wikibook]]
 - [[http://haskellbook.com/][Haskell Programming From First Principles]]
 - [[http://www.cs.nott.ac.uk/~pszgmh/pih.html][Programming in Haskell]]
+
+And/or this resource to get started quickly: [[https://kowainik.github.io/projects/learn4haskell][Learn4Haskell]].
+
 ** Table of Contents                                                  :TOC_3:
 - [[#haskell-study-plan][Haskell Study Plan]]
   - [[#about-this-guide][About This Guide]]
@@ -71,7 +74,7 @@ If you prefer a gentler introduction, try one of these resources:
     - [[#a-few-cool-open-source-applications][A Few Cool Open-Source Applications]]
 
 ** Beginning
-1. [[https://haskell.fpcomplete.com/get-started][Get Started]]
+1. [[https://github.com/kowainik/learn4haskell#installing-haskell][Install GHC+cabal-install]] (or [[https://github.com/kakkun61/ghcups][ghcups]] for windows powershell) and [[https://haskell.fpcomplete.com/get-started][Get Started]] for Stack
 2. [[https://soupi.github.io/rfc/reading_simple_haskell][Reading Simple Haskell]]
 3. [[https://soupi.github.io/rfc/writing_simple_haskell][Writing Simple Haskell]]
 4. [[https://en.wikibooks.org/wiki/Haskell/Indentation][Indentation]]
@@ -116,9 +119,9 @@ Here are a few useful packages you might want to use when building software with
 - [[https://www.haskell.org/hoogle/][Hoogle]]
 - [[https://github.com/ndmitchell/ghcid#readme][GHCid]]
 - Editor Integration
+  - [[https://marketplace.visualstudio.com/items?itemName=haskell.haskell][VSCode / VSCodium]] (* Recommended. Just install the `haskell` extension in vscode/vscodium.)
   - [[https://github.com/soupi/minimal-haskell-emacs][Emacs]]
     - [[https://github.com/soupi/minimal-haskell-emacs/tree/evil][+ vim bindings]]
-  - [[https://github.com/dramforever/vscode-ghc-simple][VSCode]]
   - [[https://www.reddit.com/r/haskell/comments/9bxbwp/which_ide_are_you_using_for_hakell/][More Options]]
 - [[https://www.ahri.net/practical-haskell-programs-from-scratch/][Practical Haskell programs from scratch - a quick and easy guide]]
 - [[https://sakshamsharma.com/2018/03/haskell-proj-struct/][Structuring your first Haskell project with Stack]]
