@@ -6,7 +6,7 @@ It is aimed at more experienced programmers that would like a denser Haskell tut
 
 If you prefer a gentler introduction, try one of these resources:
 
-- [[https://www.seas.upenn.edu/~cis194/spring13/lectures.html][cis194 course]]
+- [[https://www.seas.upenn.edu/~cis194/spring13/lectures.html][cis194 course (2013)]] or [[https://www.cis.upenn.edu/~cis194/fall16/][cis194 course (2016)]]
 - [[https://en.wikibooks.org/wiki/Haskell][Haskell Wikibook]]
 - [[http://haskellbook.com/][Haskell Programming From First Principles]]
 - [[http://www.cs.nott.ac.uk/~pszgmh/pih.html][Programming in Haskell]]
@@ -80,7 +80,8 @@ And/or this resource to get started quickly: [[https://kowainik.github.io/projec
 4. [[https://en.wikibooks.org/wiki/Haskell/Indentation][Indentation]]
 5. [[https://www.seas.upenn.edu/~cis194/spring13/lectures/01-intro.html][Haskell intro (cis194)]]
 6. [[http://www.scs.stanford.edu/16wi-cs240h/slides/basics.html][Haskell Basics (cs240h)]]
-7. [[https://github.com/Gabriel439/slides/blob/master/bigtechday/slides.md][Haskell and proving things]]
+7. [[https://gilmi.me/blog/post/2020/10/01/substitution-and-equational-reasoning][Substitution and Equational Reasoning]]
+8. [[https://github.com/Gabriel439/slides/blob/master/bigtechday/slides.md][Haskell and proving things]]
    - Read until "Everything is a Monoid" (right after "Chaining proofs")
 
 The basics are important, each resource here brings it's own view on it which will help solidify this material.
@@ -710,6 +711,7 @@ You may not need it!
 - [[https://markkarpov.com/post/migrating-text-metrics.html][Migrating text metrics to pure Haskell]]
 - [[https://two-wrongs.com/on-competing-with-c-using-haskell.html][On Competing With C Using Haskell]]
 - [[https://github.com/ChrisPenner/wc][wc - Counting Words With Haskell]]
+- [[https://www.joachim-breitner.de/blog/758-Winter_is_coming_even_more_quickly][Winter is coming even more quickly]]
 *** Data Structures
 
 The choice of a data structure is determined by the properties of your data and the algorithms used.
