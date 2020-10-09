@@ -6,7 +6,7 @@ It is aimed at more experienced programmers that would like a denser Haskell tut
 
 If you prefer a gentler introduction, try one of these resources:
 
-- [[https://www.seas.upenn.edu/~cis194/spring13/lectures.html][cis194 course (2013)]] or [[https://www.cis.upenn.edu/~cis194/fall16/][cis194 course (2016)]]
+- [[https://www.seas.upenn.edu/~cis194/spring13/lectures.html][cis194 course (2013)]] or [[https://haskell-via-sokoban.nomeata.de/][Haskell via Sokoban]]
 - [[https://en.wikibooks.org/wiki/Haskell][Haskell Wikibook]]
 - [[http://haskellbook.com/][Haskell Programming From First Principles]]
 - [[http://www.cs.nott.ac.uk/~pszgmh/pih.html][Programming in Haskell]]
@@ -826,6 +826,7 @@ Here are a few cool open source applications written in Haskell that might accep
 - [[https://owickstrom.github.io/komposition][Komposition]] - The video editor built for screencasters.
 - [[https://github.com/matterhorn-chat/matterhorn][Matterhorn]] - A terminal client for the Mattermost chat system.
 - [[https://github.com/lettier/movie-monad][Movie-Monad]] - A free and simple to use video player made with Haskell.
+- [[https://neuron.zettel.page/][neuron]] - A future-proof command-line app for managing your plain-text Zettelkasten notes.
 - [[https://github.com/jaspervdj/patat][patat]] - Terminal-based presentations using Pandoc.
 - [[https://github.com/begriffs/postgrest][postgrest]] - REST API for any Postgres database.
 - [[https://github.com/purescript/purescript][PureScript]] - A strongly-typed language that compiles to Javascript.
