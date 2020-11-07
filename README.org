@@ -787,7 +787,8 @@ Examples:
 *** Parse, Don't Validate
 - [[https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/][Parse, don't validate]]
 *** More
-[[https://www.reddit.com/r/haskell/comments/5r271m/haskell_design_patterns/][Discussion on Reddit]]
+- [[https://www.reddit.com/r/haskell/comments/5r271m/haskell_design_patterns/][Discussion on Reddit]]
+- [[https://gumroad.com/l/CLyzT][William Yao - Abstractions in Context (book)]]
 ** More
 *** More resources, tutorials and project ideas
 - [[http://gilmi.me/blog/post/2015/02/25/after-lyah][In this blog post]]
