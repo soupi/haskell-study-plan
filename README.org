@@ -11,6 +11,11 @@ If you prefer a gentler introduction, try one of these resources:
 - [[http://haskellbook.com/][Haskell Programming From First Principles]]
 - [[http://www.cs.nott.ac.uk/~pszgmh/pih.html][Programming in Haskell]]
 
+If you prefer videos:
+
+- [[https://www.youtube.com/playlist?list=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV][Haskell for Imperative Programmers]]
+- [[https://www.youtube.com/playlist?list=PLF1Z-APd9zK7usPMx3LGMZEHrECUGodd3][Functional Programming in Haskell]] and [[https://www.youtube.com/playlist?list=PLF1Z-APd9zK5uFc8FKr_di9bfsYv8-lbc][Advanced Functional Programming in Haskell]]
+
 And/or this resource to get started quickly: [[https://kowainik.github.io/projects/learn4haskell][Learn4Haskell]].
 
 ** Table of Contents                                                  :TOC_3:
@@ -18,8 +23,8 @@ And/or this resource to get started quickly: [[https://kowainik.github.io/projec
   - [[#about-this-guide][About This Guide]]
   - [[#beginning][Beginning]]
   - [[#more-basics-drill-down][More Basics Drill Down]]
-  - [[#useful-packages][Useful Packages]]
   - [[#tools][Tools]]
+  - [[#useful-packages][Useful Packages]]
   - [[#exercises][Exercises]]
     - [[#lists][Lists]]
     - [[#sort-a-list][Sort a List]]
@@ -50,8 +55,8 @@ And/or this resource to get started quickly: [[https://kowainik.github.io/projec
     - [[#using-either-for-errors][Using Either for errors]]
     - [[#exceptions][Exceptions]]
     - [[#exercises-4][Exercises]]
-  - [[#debugging][Debugging]]
   - [[#laziness][Laziness]]
+  - [[#debugging][Debugging]]
   - [[#performance][Performance]]
     - [[#resources][Resources]]
     - [[#data-structures][Data Structures]]
@@ -66,7 +71,8 @@ And/or this resource to get started quickly: [[https://kowainik.github.io/projec
     - [[#parse-dont-validate][Parse, Don't Validate]]
     - [[#more-1][More]]
   - [[#more-2][More]]
-    - [[#more-resources-tutorials-and-project-ideas][More resources, tutorials and project ideas]]
+    - [[#hands-on-tutorials][Hands-on tutorials]]
+    - [[#project-ideas][Project ideas]]
     - [[#some-advanced-topics][Some Advanced Topics]]
     - [[#references][References]]
     - [[#news-aggregators][News Aggregators]]
@@ -74,14 +80,15 @@ And/or this resource to get started quickly: [[https://kowainik.github.io/projec
     - [[#a-few-cool-open-source-applications][A Few Cool Open-Source Applications]]
 
 ** Beginning
-1. [[https://github.com/kowainik/learn4haskell#installing-haskell][Install GHC+cabal-install]] (or [[https://github.com/kakkun61/ghcups][ghcups]] for windows powershell) and [[https://haskell.fpcomplete.com/get-started][Get Started]] for Stack
-2. [[https://soupi.github.io/rfc/reading_simple_haskell][Reading Simple Haskell]]
-3. [[https://soupi.github.io/rfc/writing_simple_haskell][Writing Simple Haskell]]
-4. [[https://en.wikibooks.org/wiki/Haskell/Indentation][Indentation]]
-5. [[https://www.seas.upenn.edu/~cis194/spring13/lectures/01-intro.html][Haskell intro (cis194)]]
-6. [[http://www.scs.stanford.edu/16wi-cs240h/slides/basics.html][Haskell Basics (cs240h)]]
-7. [[https://gilmi.me/blog/post/2020/10/01/substitution-and-equational-reasoning][Substitution and Equational Reasoning]]
-8. [[https://github.com/Gabriel439/slides/blob/master/bigtechday/slides.md][Haskell and proving things]]
+1. [[https://www.haskell.org/downloads][Install Haskell]]
+2. [[https://github.com/soupi/www.haskell.org/blob/core-tools-page/core-tools.markdown][Learn about the core tools]]
+3. [[https://soupi.github.io/rfc/reading_simple_haskell][Reading Simple Haskell]]
+4. [[https://soupi.github.io/rfc/writing_simple_haskell][Writing Simple Haskell]]
+5. [[https://en.wikibooks.org/wiki/Haskell/Indentation][Indentation]]
+6. [[https://www.seas.upenn.edu/~cis194/spring13/lectures/01-intro.html][Haskell intro (cis194)]]
+7. [[http://www.scs.stanford.edu/16wi-cs240h/slides/basics.html][Haskell Basics (cs240h)]]
+8. [[https://gilmi.me/blog/post/2020/10/01/substitution-and-equational-reasoning][Substitution and Equational Reasoning]]
+9. [[https://github.com/Gabriel439/slides/blob/master/bigtechday/slides.md][Haskell and proving things]]
    - Read until "Everything is a Monoid" (right after "Chaining proofs")
 
 The basics are important, each resource here brings it's own view on it which will help solidify this material.
@@ -102,6 +109,16 @@ Key ideas:
   - [[https://en.wikibooks.org/wiki/Haskell/More_on_datatypes#Named_Fields_(Record_Syntax)][Records]]
   - [[https://en.wikibooks.org/wiki/Haskell/Higher-order_functions][Higher Order Functions]]
   - [[https://en.wikibooks.org/wiki/Haskell/Modules][Modules]] and [[https://en.wikibooks.org/wiki/Haskell/Standalone_programs][Standalone Programs]]
+** Tools
+- [[https://www.haskell.org/hoogle/][Hoogle]]
+- [[https://github.com/ndmitchell/ghcid#readme][GHCid]]
+- Editor Integration
+  - [[https://marketplace.visualstudio.com/items?itemName=haskell.haskell][VSCode / VSCodium]] (* Recommended. Just install the `haskell` extension in vscode/vscodium.)
+  - [[https://github.com/soupi/minimal-haskell-emacs][Emacs]]
+    - [[https://github.com/soupi/minimal-haskell-emacs/tree/evil][+ vim bindings]]
+  - [[https://www.reddit.com/r/haskell/comments/9bxbwp/which_ide_are_you_using_for_hakell/][More Options]]
+- [[https://www.ahri.net/practical-haskell-programs-from-scratch/][Practical Haskell programs from scratch - a quick and easy guide]]
+- [[https://sakshamsharma.com/2018/03/haskell-proj-struct/][Structuring your first Haskell project with Stack]]
 ** Useful Packages
 Here are a few useful packages you might want to use when building software with Haskell:
 
@@ -115,17 +132,6 @@ Here are a few useful packages you might want to use when building software with
 - [[http://hackage.haskell.org/package/random][random]] - random number library.
 
 [[https://hackage.haskell.org/][And more]].
-** Tools
-- [[https://en.wikibooks.org/wiki/Haskell/Using_GHCi_effectively][Using GHCi Effectively]]
-- [[https://www.haskell.org/hoogle/][Hoogle]]
-- [[https://github.com/ndmitchell/ghcid#readme][GHCid]]
-- Editor Integration
-  - [[https://marketplace.visualstudio.com/items?itemName=haskell.haskell][VSCode / VSCodium]] (* Recommended. Just install the `haskell` extension in vscode/vscodium.)
-  - [[https://github.com/soupi/minimal-haskell-emacs][Emacs]]
-    - [[https://github.com/soupi/minimal-haskell-emacs/tree/evil][+ vim bindings]]
-  - [[https://www.reddit.com/r/haskell/comments/9bxbwp/which_ide_are_you_using_for_hakell/][More Options]]
-- [[https://www.ahri.net/practical-haskell-programs-from-scratch/][Practical Haskell programs from scratch - a quick and easy guide]]
-- [[https://sakshamsharma.com/2018/03/haskell-proj-struct/][Structuring your first Haskell project with Stack]]
 ** Exercises
 *** Lists
 - [[https://wiki.haskell.org/99_questions/1_to_10][1-10 Haskell Problems]]
@@ -182,6 +188,9 @@ $ rpn-calc 5 7 2 negate + *
 The lambda calculus is a minimalistic language that is in the core of functional programming.
 
 It presents a minimalistic framework to learn about many common features in functional languages.
+
+While this section isn't strictly necessary, and you can skip it, it does provide some
+insight about the core of Haskell.
 
 - [[http://www.inf.fu-berlin.de/lehre/WS03/alpi/lambda.pdf][A tutorial on the lambda calculus]]
 - [[https://gitlab.cecs.anu.edu.au/pages/2019-S1/courses/comp1100/lectures/lambda.pdf][Slides on the lambda calculus]]
@@ -685,22 +694,22 @@ two approaches you can use are:
 - [[https://www.oreilly.com/library/view/parallel-and-concurrent/9781449335939/ch08.html#sec_exceptions][Exceptions]]
 *** Exercises
 - Revise your [[#rpn-calculator][RPN Calculator]] to use ~Either~ to terminate early due to errors.
-** Debugging
-- [[https://en.wikibooks.org/wiki/Haskell/Debugging][Using Traces]]
 ** Laziness
+- [[https://apfelmus.nfshost.com/articles/lazy-eval.html][The Incomplete Guide to Lazy Evaulation (In Haskell)]]
 - [[http://blog.ezyang.com/2011/04/the-haskell-heap/][The Haskell Heap]]
 - [[https://www.oreilly.com/library/view/parallel-and-concurrent/9781449335939/ch02.html#sec_par-eval-whnf][Lazy Evaluation and Weak Head Normal Form]]
 - [[https://two-wrongs.com/how-laziness-works][How laziness works - a tour through Haskell IRs]]
+** Debugging
+- [[https://en.wikibooks.org/wiki/Haskell/Debugging][Using Traces]]
 ** Performance
-Haskell can be fast and have a low memory foot-print in many scenarios even when you use immutable data structures
-and uneffectful code.
+Haskell can be fast and have a low memory foot-print in many scenarios even when you use immutable data structures and uneffectful code.
 
-It is a good idea to keep your code idiomatic and measure before you decide to use mutation and other fancier methods.
-You may not need it!
+It is a good idea to keep your code idiomatic and measure before you decide to use mutation and other fancier methods. You may not need it!
 *** Resources
 **** General
 - [[https://en.wikibooks.org/wiki/Haskell/Performance_introduction][Introduction]]
-- [[http://slides.com/fp-ctd/lecture-10#/][Haskell ITMO course at CTD - Lecture 10]]
+- [[https://www.slideshare.net/tibbe/highperformance-haskell][High Performance Haskell]]
+- [[https://www.scs.stanford.edu/16wi-cs240h/slides/perf.html][Performance (cs240h)]]
 **** Profiling
 - [[https://stackoverflow.com/questions/32123475/profiling-builds-with-stack][Profiling Builds with Stack]]
 - [[http://book.realworldhaskell.org/read/profiling-and-optimization.html][Profiling and Optimization]]
@@ -741,7 +750,7 @@ Functors and applicative interfaces [[https://hackage.haskell.org/package/transf
 
 Monad transformers are a way to compose the capabilities of multiple type's monadic interface to one type.
 
-- [[http://slides.com/fp-ctd/lecture-9#][Haskell ITMO course at CTD - Lecture 9]]
+- [[http://slides.com/fp-ctd/lecture-7#][Haskell ITMO course at CTD - Lecture 7]]
 - [[https://two-wrongs.com/a-gentle-introduction-to-monad-transformers][A Gentle Introduction to Monad Transformers]]
 - [[https://www.schoolofhaskell.com/user/commercial/content/monad-transformers][School of Haskell - Monad Transformers]]
 - [[https://blog.jle.im/entry/mtl-is-not-a-monad-transformer-library.html][mtl is Not a Monad Transformer Library]]
@@ -787,17 +796,39 @@ Examples:
 *** Parse, Don't Validate
 - [[https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/][Parse, don't validate]]
 *** More
+- [[https://www.fpcomplete.com/blog/2017/06/readert-design-pattern/][The ReaderT Design Pattern]]
 - [[https://www.reddit.com/r/haskell/comments/5r271m/haskell_design_patterns/][Discussion on Reddit]]
 - [[https://gumroad.com/l/CLyzT][William Yao - Abstractions in Context (book)]]
+- [[https://algebradriven.design][Algebra-Driven Design (book)]]
 ** More
-*** More resources, tutorials and project ideas
-- [[http://gilmi.me/blog/post/2015/02/25/after-lyah][In this blog post]]
+*** Hands-on tutorials
+- [[https://marcosampellegrini.com/simple-haskell-book][The Simple Haskell Handbook - build a continuous integration server from scratch (book)]]
+- [[https://blog.jle.im/entry/streaming-huffman-compression-in-haskell-part-1-trees][Streaming Huffman Compression in Haskell]]
+- [[https://github.com/soupi/learn-haskell-blog-generator][Learn Haskell by building a blog generator]]
+- [[https://lokathor.gitbooks.io/using-haskell/content/][OpenGL Using Haskell]]
+- [[https://gilmi.me/blog/post/2016/10/14/lisp-to-js][Compiling Lisp to JavasScript from scratch in 350 LOC]]
+- [[https://wespiser.com/writings/wyas/home.html][Write you a Scheme, version 2]]
+- [[https://gilmi.me/blog/post/2020/12/05/scotty-bulletin-board][Building a bulletin board website using scotty and friends]]
+*** Project ideas
+- Morse code encoder/decoder
+- A file reader
+- Over the network rock-paper-scissors game
+- An RPN calculator
+- A markdown (subset) to HTML converter
+- A [[https://gemini.circumlunar.space][gemini]] server
+- Cookie clicker
+- A chat server and client
+- A picture album website
+- A pastebin clone
+- A tetris game
+- A discord bot
 *** Some Advanced Topics
 These may not be as useful for your everyday programming tasks, but it's nice to know they exist when you need them
 
 - [[https://en.wikibooks.org/wiki/Haskell/FFI][Foreign Function Interface]]
 - [[https://chrisdone.com/posts/data-typeable][Generic Programming]]
 - [[https://markkarpov.com/tutorial/th.html][Meta Programming with Template Haskell]]
+- [[https://lexi-lambda.github.io/blog/2021/03/25/an-introduction-to-typeclass-metaprogramming][An introduction to typeclass metaprogramming]]
 - [[https://diogocastro.com/blog/2018/10/17/haskells-kind-system-a-primer/][Haskell's kind system - a primer]] and [[https://www.parsonsmatt.org/2017/04/26/basic_type_level_programming_in_haskell.html][Basic Type Level Programming]]
 - [[https://blog.sumtypeofway.com/an-introduction-to-recursion-schemes/][Recursion Schemes]]
 - [[https://skillsmatter.com/skillscasts/4251-lenses-compositional-data-access-and-manipulation][Lenses]]
@@ -811,17 +842,18 @@ These may not be as useful for your everyday programming tasks, but it's nice to
 - [[https://anardil.net/tag/coreutils.html][Unix core utilities in Haskell]]
 - [[https://gist.github.com/soupi/199a16be6e2071c3b724][Simple File Reader]]
 - [[https://gitlab.com/gilmi/sdl2-snake][Snake Game]]
-- [[https://gitlab.com/gilmi/hen][Static Blog Generator]]
 - [[https://gitlab.com/gilmi/sod-cmus][Simplified Web Interface to cmus]]
 - [[https://gitlab.com/gilmi/imgs][Image Server]]
-- [[https://gitlab.com/gilmi/plaste][paste-bin]]
+- [[https://gitlab.com/gilmi/sharelinks][Minimalistic website for link sharing]]
 - [[https://github.com/jackoe/discourse-tui][A terminal UI for discourse]]
+- [[https://github.com/alpacaaa/quad-ci][Continuous Integration system]]
 *** A Few Cool Open-Source Applications
 Here are a few cool open source applications written in Haskell that might accept contributions if you're interested.
 
 - [[https://github.com/aurapm/aura/][Aura]] - A package manager for Arch Linux and its AUR.
 - [[https://github.com/google/codeworld][CodeWorld]] - CodeWorld is an educational environment using Haskell.
 - [[https://lettier.github.io/gifcurry/][gifcurry]] - Your open source video to GIF maker built with Haskell.
+- [[https://giml-lang.org][Giml]] - A functional programming language built live on stream.
 - [[https://github.com/therewillbecode/haskell-poker][Haskell-Poker]] - A poker site built with Haskell.
 - [[http://hledger.org/][hledger]] -  Friendly, robust, plain text accounting.
 - [[https://owickstrom.github.io/komposition][Komposition]] - The video editor built for screencasters.
