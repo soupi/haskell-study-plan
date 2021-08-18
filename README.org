@@ -81,7 +81,7 @@ And/or this resource to get started quickly: [[https://kowainik.github.io/projec
 
 ** Beginning
 1. [[https://www.haskell.org/downloads][Install Haskell]]
-2. [[https://github.com/soupi/www.haskell.org/blob/core-tools-page/core-tools.markdown][Learn about the core tools]]
+2. [[https://gilmi.me/blog/post/2021/08/14/hs-core-tools][Learn about the core tools]]
 3. [[https://soupi.github.io/rfc/reading_simple_haskell][Reading Simple Haskell]]
 4. [[https://soupi.github.io/rfc/writing_simple_haskell][Writing Simple Haskell]]
 5. [[https://en.wikibooks.org/wiki/Haskell/Indentation][Indentation]]
