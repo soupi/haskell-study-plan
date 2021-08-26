@@ -16,7 +16,10 @@ If you prefer videos:
 - [[https://www.youtube.com/playlist?list=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV][Haskell for Imperative Programmers]]
 - [[https://www.youtube.com/playlist?list=PLF1Z-APd9zK7usPMx3LGMZEHrECUGodd3][Functional Programming in Haskell]] and [[https://www.youtube.com/playlist?list=PLF1Z-APd9zK5uFc8FKr_di9bfsYv8-lbc][Advanced Functional Programming in Haskell]]
 
-And/or this resource to get started quickly: [[https://kowainik.github.io/projects/learn4haskell][Learn4Haskell]].
+And/or one of these resources to get started quickly:
+
+- [[https://kowainik.github.io/projects/learn4haskell][Kowainik's Learn4Haskell]]
+- [[https://typeclasses.com/beginner-crash-course][Typeclasses' Beginner crash course]]
 
 ** Table of Contents                                                  :TOC_3:
 - [[#haskell-study-plan][Haskell Study Plan]]
