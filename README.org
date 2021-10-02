@@ -1,4 +1,7 @@
 * Haskell Study Plan
+
+| You might also be interested in my project-oriented online book: [[https://soupi.github.io/learn-haskell-blog-generator/][Learning Haskell by building a static blog generator]] |
+
 ** About This Guide
 This guide is an opinionated list of resources for learning Haskell.
 
