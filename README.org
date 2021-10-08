@@ -857,6 +857,7 @@ These may not be as useful for your everyday programming tasks, but it's nice to
 Here are a few cool open source applications written in Haskell that might accept contributions if you're interested.
 
 - [[https://github.com/aurapm/aura/][Aura]] - A package manager for Arch Linux and its AUR.
+- [[https://gitlab.com/gilmi/bulletin-app][bulletin-app]] - A bulletin board website app built with haskell and scotty.
 - [[https://github.com/google/codeworld][CodeWorld]] - CodeWorld is an educational environment using Haskell.
 - [[https://lettier.github.io/gifcurry/][gifcurry]] - Your open source video to GIF maker built with Haskell.
 - [[https://giml-lang.org][Giml]] - A functional programming language built live on stream.
@@ -866,6 +867,7 @@ Here are a few cool open source applications written in Haskell that might accep
 - [[https://github.com/matterhorn-chat/matterhorn][Matterhorn]] - A terminal client for the Mattermost chat system.
 - [[https://github.com/lettier/movie-monad][Movie-Monad]] - A free and simple to use video player made with Haskell.
 - [[https://neuron.zettel.page/][neuron]] - A future-proof command-line app for managing your plain-text Zettelkasten notes.
+- [[https://gilmi.me/nyx][nyx-game]] - A short bullet-hell game made with Haskell.
 - [[https://github.com/jaspervdj/patat][patat]] - Terminal-based presentations using Pandoc.
 - [[https://github.com/begriffs/postgrest][postgrest]] - REST API for any Postgres database.
 - [[https://github.com/purescript/purescript][PureScript]] - A strongly-typed language that compiles to Javascript.
