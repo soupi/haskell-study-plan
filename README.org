@@ -137,6 +137,8 @@ Here are a few useful packages you might want to use when building software with
 - [[http://hackage.haskell.org/package/network][network]] - Low-level networking interface.
 - [[http://hackage.haskell.org/package/random][random]] - random number library.
 
+Book (paid): [[https://leanpub.com/haskell-stdlibs/][Haskell (Almost) Standard Libraries]] by Alejandro Serrano Mena
+
 [[https://hackage.haskell.org/][And more]].
 ** Exercises
 *** Lists
